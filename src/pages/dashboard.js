@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
 import { CharOfAccounts, Transactions, Journal, profile, Profile,Doc } from '../components';
 import { PurchaseJournal,SalesJournal,CashDisbursementsJournal,CashReceiptJournal } from '../components/JournalComponent';
 import { GeneralLedger,PayableLedger,ReceivableLedger } from '../components/Ledger';
@@ -98,9 +99,9 @@ const SignInComponent=({business,updateBusiness})=>{
                             // check if userName or password is incorrect and show message;
 
                             if(_business.userName===signInInfo.userName){
-                                alert("Incorrect Password");
+                                Swal.fire("Incorrect Password");
                             }else{
-                                alert("Incorrect UserName")
+                                Swal.fire("Incorrect UserName")
 
                             }
                             

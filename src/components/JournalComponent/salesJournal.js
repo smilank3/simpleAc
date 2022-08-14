@@ -73,7 +73,7 @@ const SalesJournal=()=>{
                         )
                      })}
                 </tbody>
-                <tfoot>
+                <tfoot style={{display:journalEntries.length?'':'none'}}>
                     <tr>
                         <td>{new Date().toLocaleDateString()}</td>
                         <td colSpan={3} style={{textAlign:'right',fontWeight:650}}>Totals</td>
